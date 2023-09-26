@@ -1,0 +1,69 @@
+{
+    "name": "Memfault",
+    "logo": {
+      "light": "/logo/light.png",
+      "dark": "/logo/dark.png"
+    },
+    "favicon": "/favicon.webp",
+    "colors": {
+      "primary": "#49B4A7",
+      "light": "#79D7CB",
+      "dark": "#49B4A7"
+    },
+    "api": {
+        "baseUrl": [
+          "api.memfault.com",
+          "chunks.memfault.com",
+          "ingress.memfault.com",
+          "files.memfault.com"
+        ]
+      },
+    "topbarCtaButton": {
+      "name": "Sign Up",
+      "url": "https://memfault.com/register?utm_campaign=Self%20Serve%20Launch&utm_source=Docs"
+    },
+    "topbarLinks": [
+      {
+        "name": "Log In",
+        "url": "https://app.memfault.com/"
+      }
+    ],
+    "anchors": [
+      {
+        "name": "GitHub",
+        "icon": "github",
+        "url": "https://github.com/memfault"
+      },
+      {
+        "name": "Blog",
+        "icon": "newspaper",
+        "url": "https://blog.memfault.com/"
+      }
+    ],
+    "tabs": [
+        {
+            "name": "API Reference",
+            "url": "api-reference"
+        }
+    ],
+    "navigation": [
+      {
+        "group": "Web Application",
+        "pages": ["web-application/introduction-to-memfault"]
+      },
+      {
+        "group": "Auth",
+        "pages": [
+          "api-reference/auth/me",
+          "api-reference/auth/get-user-api-key",
+          "api-reference/auth/generate-user-api-key",
+          "api-reference/auth/reset-user-api-key"
+        ]
+      }
+    ],
+    "footerSocials":
+      {
+          "twitter": "https://twitter.com/memfault",
+          "linkedin": "https://www.linkedin.com/company/memfault/"
+      }
+  }
