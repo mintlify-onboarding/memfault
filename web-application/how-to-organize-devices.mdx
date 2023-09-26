@@ -1,0 +1,106 @@
+---
+title: "How to Organize Devices"
+---
+
+## Categorization Schemes[](#categorization-schemes "Direct link to Categorization Schemes")
+
+| Method       | Primary Use                    | Comment                                                                                                                                                                                                                                                                                            |
+| ------------ | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Organization | Different companies            | Users can belong to one or more Organizations.                                                                                                                                                                                                                                                     |
+| Project      | Different Products             | Devices based on a different SW codebase and hardware. Devices will use a different Project Key to upload to their respective Project.                                                                                                                                                             |
+| Cohort       | OTA Segments (beta, prod, etc) | Specifically designed for OTA control (in the future, Device Configuration will also apply at the cohort level). A device is always assigned to exactly one Cohort but can be re-assigned at any time. Cohorts also can be used for filtering data (for example on the Overview and Metric pages). |
+| Device Sets  | Logical groups of devices      | Create filters on Attributes and MeticsUsed for eg co-deployments, geolocal groups, "all devices manufactured in February with battery state-of-health below 80%"A device can belong to multiple Device Sets                                                                                       |
+
+## Organizations[](#organizations "Direct link to Organizations")
+
+At the highest level, you have your Organization. This maps directly to the organization that has a Memfault license. For most users, you will only have one Organization, the company you work for.
+
+There are a few scenarios where you may have access to multiple organizations such as if you are a contractor and have a Memfault account for different companies you are working with or if you have a personal Memfault account in addition to the one for the company you work with.
+
+You can see which organizations you have access to by clicking on your name in the top right hand corner, and clicking **Change Organization** from the drop down. Select the organization you wish to navigate to.
+
+To change to a different organization, simply click on the name and the selected organization will load. To set the organization loaded by default when navigating to [https://app.memfault.com](https://app.memfault.com), click on the star icon next to that organization in the drop down.
+
+![/img/docs/platform/navigating-orgs.png](/images/13.png)
+
+## Projects[](#projects "Direct link to Projects")
+
+A **Project** is the umbrella under which Memfault organizes all the data related to a particular hardware product. Individual **Devices** check in periodically to the Project using one of the Memfault SDKs or the Memfault API, and the set of all checked-in Devices is called the **Fleet**.
+
+A Fleet often consists of homogeneous devices, like a certain model of an AC unit or a games console. Fleets may also consist of different but related devices, for example left and right wireless earbuds. We recommend keeping different revisions of the same hardware in the same Project, so that revisions can be easily compared later.
+
+Within each Memfault Project you can:
+
+* [Monitor Fleet-wide metrics](/docs/platform/charts)
+* [Inspect and debug individual Devices](/docs/platform/inspecting-a-device)
+* Deploy new firmware/software updates to parts of your[Android](/docs/android/android-releases-integration-guide),[MCU](/docs/mcu/releases-integration-guide) or [Linux](/docs/linux/ota) Fleet
+
+### Creating a new Project[](#creating-a-new-project "Direct link to Creating a new Project")
+
+You can create a new project in Memfault by navigating to the project selector in the sidebar. You can find an option to **Create Project** below your list of existing projects.
+
+![/binary-assets/create-new-project.gif](/images/14.gif)
+
+## Organizing Devices Within a Project[](#organizing-devices-within-a-project "Direct link to Organizing Devices Within a Project")
+
+### Cohorts[](#cohorts "Direct link to Cohorts")
+
+You can slice your Fleet into mutually exclusive **Cohorts**, for example a`beta` Cohort and a `production` Cohort. Cohorts are perfect for releasing new firmware versions to a small test group, before pushing it out to customers. Cohorts also lend themselves to things like light A/B testing, or deploying slight variations of the firmware to different Device revisions within a Project.
+
+note
+
+As you may have noticed already, Cohorts are meant to help you deploy the right software to the right Devices at the right time. Devices can only belong to one cohort at a time.
+
+With Cohorts you can:
+
+* Filter Overview Page by Cohort
+* Filter [Metrics Charts](/docs/platform/docs/platform/charts) by Cohort
+* Compare Metrics Charts across Cohorts and Software Versions
+* Set [Alerts](/docs/platform/alerts) by Cohorts
+* Filter [Issue](/docs/platform/docs/platform/issue-management) and Device Page by Cohorts
+
+### Device Sets[](#device-sets "Direct link to Device Sets")
+
+It is often useful to search for devices that fulfill certain criteria and to keep track of the number of matches over time. Examples of this could be searching for devices that:
+
+1. have not communicated with Memfault within the last N days,
+2. are running a deprecated software version, or
+3. are reporting a metric over a critical threshold.
+
+This kind of follow-up can easily be done by defining a **Device Set**, which will do a daily tally of a search query of your choice, and present it to you in a graph:
+
+![](/images/15.png)
+
+As soon as the Device Set is defined, Memfault starts collecting daily tallies. We store daily tallies for up to 14 days.
+
+Device Sets are not just pretty graphs, you can also get a listing of the Devices belonging to the Device Set, for further analysis.
+
+note
+
+Device Sets are great for getting concrete answers to fleet-wide questions. As with Cohorts, they are also a great way of categorizing your Fleet, albeit with more flexibility: a Device can be a member of any number of Device Sets.
+
+#### Creating a Device Set[](#creating-a-device-set "Direct link to Creating a Device Set")
+
+Device Sets are created from the _Devices_ page. Perform a search, click on the_Save as Device Set_ button, give the Device Set a name (and optional description) and you are done! You can view your newly created Device Set on the_Device Sets_ page.
+
+note
+
+Depending on the query, it may take up to a day for the first data to trickle in.
+
+#### Editing/deleting a Device Set[](#editingdeleting-a-device-set "Direct link to Editing/deleting a Device Set")
+
+You can edit the name and the description of the Device Set by clicking the edit button in the Device Set page. Editing the search query itself is disabled to preserve comparability with historical data, if you need to change the query, create a new Device Set.
+
+You can of course also delete a Device Set that no longer interests you.
+
+#### Viewing the Devices currently in a Device Set[](#viewing-the-devices-currently-in-a-device-set "Direct link to Viewing the Devices currently in a Device Set")
+
+Clicking the latest count for a Set in the Device Sets page will take you to the_Devices_ page, with the appropriate search terms filled in.
+
+#### Interpreting Device Set data[](#interpreting-device-set-data "Direct link to Interpreting Device Set data")
+
+The daily tally corresponds to running the same search query on the Devices page once per day, at roughly the same time. This provides an excellent large-scale overview of whatever properties of your fleet you may be interested in, but you shouldn't rely on the exact number, since the tallying time may vary slightly from day to day.
+
+When using any time-related criteria to describe a device set (for example, "Last Seen" or "Historical Data" filters), the "Start date" and "End date" values are stored into the Device Set as relative to the time of the query, as depicted below:
+
+![](/images/16.svg)

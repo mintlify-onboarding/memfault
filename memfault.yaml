@@ -1989,7 +1989,7 @@ paths:
 
         NOTE: Requires `admin` permission on the **Organization**
 
-        <hr>
+      
 
         #### Return Value
 
@@ -2068,7 +2068,7 @@ paths:
       description: |-
         List the **Projects** under a given **Organization**
 
-        <hr>
+      
 
         #### Return Value
 
@@ -2143,7 +2143,7 @@ paths:
       description: |-
         Retrieve a **Project** under a given **Organization**
 
-        <hr>
+      
 
         #### Return Value
 
@@ -2218,7 +2218,7 @@ paths:
 
         NOTE: Requires `admin` permission on the **Organization**
 
-        <hr>
+      
 
         #### Return Value
 
@@ -2304,7 +2304,7 @@ paths:
 
         NOTE: Requires `admin` permission on the **Organization**
 
-        <hr>
+      
 
         #### Return Value
 
@@ -2369,7 +2369,7 @@ paths:
       description: |-
         Return the **Project** Client Key
 
-        <hr>
+      
 
         #### Return Value
 
@@ -2445,7 +2445,7 @@ paths:
         want to do.
 
 
-        <hr>
+      
 
 
         #### Return Value
@@ -2725,7 +2725,7 @@ paths:
       description: |-
         Create a **Cohort** for the given **Project**
 
-        <hr>
+      
 
         #### Return Value
 
@@ -2796,7 +2796,7 @@ paths:
       description: |-
         List all **Cohorts** for the given **Project**
 
-        <hr>
+      
 
         #### Return Value
 
@@ -2874,7 +2874,7 @@ paths:
       description: |-
         Retrieve a single **Cohort**
 
-        <hr>
+      
 
         #### Return Value
 
@@ -2939,7 +2939,7 @@ paths:
       description: |-
         Update a single **Cohort**
 
-        <hr>
+      
 
         #### Return Value
 
@@ -3015,7 +3015,7 @@ paths:
       description: |-
         Delete a single **Cohort**
 
-        <hr>
+      
 
         #### Return Value
 
@@ -3069,7 +3069,7 @@ paths:
       description: |-
         List the **Devices** in the given **Cohort**
 
-        <hr>
+      
 
         #### Return Value
 
@@ -3154,7 +3154,7 @@ paths:
 
         NOTE: This will remove the **Devices** from their previous **Cohort**.
 
-        <hr>
+      
 
         #### Return Value
 
@@ -3217,7 +3217,7 @@ paths:
         **Device**, it will *create* one with the appropriate information.
 
 
-        <hr>
+      
 
 
         #### Return Value (Single)
@@ -3352,7 +3352,7 @@ paths:
       description: |-
         List all **Devices** for a given **Project**
 
-        <hr>
+      
 
         #### Return Value
 
@@ -3436,7 +3436,7 @@ paths:
       description: |-
         Retrieve a single **Device**
 
-        <hr>
+      
 
         #### Return Value
 
@@ -3515,7 +3515,7 @@ paths:
       description: |-
         Update a single **Device**
 
-        <hr>
+      
 
         #### Return Value
 
@@ -3605,7 +3605,7 @@ paths:
       description: |-
         Delete a single **Device**
 
-        <hr>
+      
 
         #### Return Value
 
@@ -3665,7 +3665,7 @@ paths:
         **Device**, it will *create* one with the appropriate information.
 
 
-        <hr>
+      
 
 
         #### Return Value
@@ -3736,7 +3736,7 @@ paths:
       description: |-
         List all **Software Types** for a given **Project**
 
-        <hr>
+      
 
         #### Return Value
 
@@ -3810,7 +3810,7 @@ paths:
       description: |-
         Retrieve a single **Software Type**
 
-        <hr>
+      
 
         #### Return Value
 
@@ -3884,7 +3884,7 @@ paths:
 
 
 
-        <hr>
+      
 
 
         #### Return Value
@@ -3964,7 +3964,7 @@ paths:
         **Project**
 
 
-        <hr>
+      
 
 
         #### Return Value
@@ -4045,7 +4045,7 @@ paths:
         uploading a Release Artifact.
 
 
-        <hr>
+      
 
 
         #### Request Schema
@@ -5031,7 +5031,7 @@ paths:
       description: |-
         List all **Issues** for a given **Project**
 
-        <hr>
+      
 
         #### Return Value
 
@@ -5197,7 +5197,7 @@ paths:
       description: |-
         Retrieve a single **Issue**
 
-        <hr>
+      
 
         #### Return Value
 
@@ -5361,7 +5361,7 @@ paths:
       description: |-
         Delete a single **Issue**
 
-        <hr>
+      
 
         #### Return Value
 
@@ -5415,7 +5415,7 @@ paths:
       description: |-
         Update a single **Issue**
 
-        <hr>
+      
 
         #### Return Value
 
@@ -5622,7 +5622,7 @@ paths:
         key>`.
 
 
-        <hr>
+      
 
 
         ### Request Schema
@@ -5788,7 +5788,7 @@ paths:
         key>`.
 
 
-        <hr>
+      
 
 
         #### Return Value
@@ -5863,7 +5863,7 @@ paths:
         Bugreports](https://mflt.io/34PvTBz).
 
 
-        <hr>
+      
 
 
         #### Return Value
@@ -5939,7 +5939,7 @@ paths:
         key>`.
 
 
-        <hr>
+      
 
 
         #### Return Value
@@ -6082,7 +6082,7 @@ paths:
         **Release**, it will *create* one with the appropriate information.
 
 
-        <hr>
+      
 
 
         #### Return Value
@@ -6180,7 +6180,7 @@ paths:
       description: |-
         List all **Releases** for a given **Project**
 
-        <hr>
+      
 
         #### Return Value
 
@@ -6264,7 +6264,7 @@ paths:
       description: |-
         Retrieve a single **Release**
 
-        <hr>
+      
 
         #### Return Value
 
@@ -6345,7 +6345,7 @@ paths:
       description: |-
         Update a single **Release**
 
-        <hr>
+      
 
         #### Return Value
 
@@ -6426,7 +6426,7 @@ paths:
       description: |-
         Delete a single **Release**
 
-        <hr>
+      
 
         #### Return Value
 
@@ -6579,7 +6579,7 @@ paths:
       description: |-
         **Deploy** the given **Release** to the given **Cohort**
 
-        <hr>
+      
 
         #### Return Value
 
@@ -6668,7 +6668,7 @@ paths:
       description: |-
         List all **Deployments** for the given **Project**
 
-        <hr>
+      
 
         #### Return Value
 
@@ -6753,7 +6753,7 @@ paths:
       description: |-
         Retrieve a single **Deployment**
 
-        <hr>
+      
 
         #### Return Value
 

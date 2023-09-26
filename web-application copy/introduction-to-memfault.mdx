@@ -11,14 +11,9 @@ Memfault is a cloud platform that allows you and your team to continuously monit
 
 Our platform is a **one-stop shop** for:
 
-<CardGroup cols={3}>
-  <Card title="Debugging" icon="bug" href="#debugging">
-  </Card>
-  <Card title="Over-the-air" icon="rotate-right" href="#ota">
-  </Card>
-  <Card title="Monitoring via metrics" icon="chart-mixed" href="#metrics">
-  </Card>
-</CardGroup>
+* [Debugging](#debugging).
+* [Over-the-air (OTA) updates](#ota).
+* [Monitoring via metrics](#metrics).
 
 ## Debugging[](#debugging "Direct link to Debugging")
 
@@ -28,19 +23,19 @@ Our web application offers a rich and complete view into your collected MCU[trac
 
 **Reproducing customer issues** is easier than ever before. Consider a workflow where a customer support agent files a ticket for engineering that already includes a Memfault link to the particular device that's having issues, or even a link to the trace itself.
 
-<Frame>![](/images/1.png)</Frame>
+[](images/1-debugging-registers-locals.805d55c.1920.png)
 
 Our trace analysis view offers the highest resolution available into the crash dumps your devices upload. In this example, you can see the values of local variables and registers at the time of the crash.
 
-<Frame>![](/images/2.png)</Frame>
+[](images/2-debugging-globals-statics.385f7e0.1920.png)
 
 The Memfault Web Application performs crash symbolication on your devices' traces and allows you to dig deep into the state of the device, right from your browser.
 
-<Frame>![](/images/3.png)</Frame>
+[](images/3-debugging-logs.d87da81.1920.png)
 
 Read logs relevant to each trace and perform complex text searches.
 
-<Frame>![](/images/5.png)</Frame>
+[](images/5-debugging-android-issue.1bb3dac.1920.png)
 
 An example of a root-cause analysis for a Java runtime exception from an Android device.
 
@@ -68,11 +63,11 @@ Memfault OTA updates enable this streamlined workflow as well as complex setups 
 
 Memfault OTA updates provide increased velocity, reduce the risk of rolling out an update, and offer visibility into team productivity.
 
-<Frame>![](/images/6.png)</Frame>
+[](images/6-version-matrix-staged-rollout.c0d9f81.1920.png)
 
 Activating a staged rollout to test version `2.2.0` of our product. Around 1.3K devices out of 9.1K in this fleet will receive the latest version as a canary release, and the team will monitor the behavior of the new firmware.
 
-<Frame>![](/images/7.png)</Frame>
+[](images/7-version-matrix-staged-rollout-activated.293c08c.1920.png)
 
 A view into the current state of this cohort of 9.1K devices and the next OTA payload they will be downloading.
 
@@ -92,11 +87,11 @@ Adding metrics to your Memfault integration unlocks many features whose value co
 
 A timeline view for every single individual device showcasing its metrics, including time-series data, reboots and crashes.
 
-<Frame>![](/images/4.png)</Frame>
+[](images/4-metrics-android-timeline.b346fae.1920.png)
 
 The default set of metrics Android devices report when using Memfault. Adding your own custom metrics to this selection is extremely easy.
 
-<Frame>![](/images/8.png)</Frame>
+[](images/8-device-timeline-mcu.65d583a.1920.png)
 
 Analyzing an apparent correlation between battery levels and CPU usage in a single MCU device.
 
@@ -110,25 +105,22 @@ Among others, adding metrics to your Memfault integration unlocks:
 * A rich [device search](/docs/platform/metrics/#searching-devices-by-attributes-and-timeseries) view that allows you to express the most complex queries.
 * [Device Sets](/docs/platform/projects-and-fleets/#device-sets): a way to visualize the change in the count resulting from device searches over time.
 
-<Frame>![](/images/9.png)</Frame>
+[](images/overview-dashboard-drilldown.298d3f4.1118.png)
 
 An aggregation of reboot events in your fleet. Drill down to find out which devices are causing an anomaly.
 
-<Frame>![](/images/10.png)</Frame>
+[](images/fleet-wide-metrics-compare.a0930f3.1165.png)
 
 Compare aggregated custom metrics on your whole fleet and see the effect of your recent updates using hard data.
 
-<Frame>![](/images/11.png)</Frame>
+[](images/device-search-by-timeseries.58b3e21.1920.png)
 
 Search devices using complex queries. In this example, we're looking for devices that have had a battery percentage of more than 80 in the week starting on March 3rd.
 
-<Frame>![](/images/12.png)</Frame>
+[](images/device-set-page.a7d403f.1920.png)
 
 Save your searches as device sets and observe the evolution of the results.
 
+📖Read More
 
-<Note>
-    **📖 Read More**
-
-    To learn more about monitoring using Metrics, continue on to[documentation on Metrics and Attributes](/docs/platform/metrics/).
-</Note>    
+To learn more about monitoring using Metrics, continue on to[documentation on Metrics and Attributes](/docs/platform/metrics/).
